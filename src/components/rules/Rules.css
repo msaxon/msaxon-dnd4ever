@@ -1,0 +1,13 @@
+.ruleCard {
+    display: flex;
+    margin: 20px;
+    align-items: stretch;
+    min-height: 200px;
+}
+
+.searchBar {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,60 @@
+.tileContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: salmon;
+    border: black solid thin;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 400px;
+}
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+nav + div {
+    flex: 0 0 auto;
+}
+
+.menu {
+    margin-left: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.buttonContainer .MuiButton-root {
+    margin-bottom: 10px;
+}
