@@ -1,6 +1,6 @@
 {
     "name": "dnd-forever",
-    "homepage": "http://msaxon.github.io/dnd-4ever",
+    "homepage": "http://msaxon.github.io/msaxon-dnd4ever",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
