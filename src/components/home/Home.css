@@ -1,0 +1,27 @@
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.ruleCardContainer {
+    align-items: stretch;
+}
+
+.ruleCard-home {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px;
+    min-height: 200px;
+    max-width: 310px;
+    min-width: 310px;
+}
+
+.anchor-card {
+    color: inherit;
+    text-decoration: none;
+}

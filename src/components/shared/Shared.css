@@ -58,3 +58,10 @@ nav + div {
 .buttonContainer .MuiButton-root {
     margin-bottom: 10px;
 }
+
+.center-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

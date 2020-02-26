@@ -64,9 +64,10 @@ export const Random: React.FC<{}> = () => {
                 return <p>Click a button to generate something random.</p>;
         }
     };
+
     panels.sort((a, b) => {
-        if (a > b) return -1;
-        else if (a < b) return 1;
+        if (a.value > b.value) return 1;
+        else if (a.value < b.value) return -1;
         else return 0;
     });
 
