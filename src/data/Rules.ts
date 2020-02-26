@@ -86,6 +86,12 @@ export const RulesTwo = [
         desc: 'Cost of living per day per lifestyle',
         img: 'https://i.pinimg.com/originals/36/0b/f5/360bf5cb8154e4b75cc958f260dccffe.png',
         tags: ['living', 'cost', 'prices']
+    },
+    {
+        title: 'Conditions',
+        desc: 'List of all statuses and conditions',
+        img: 'https://thinkdm.files.wordpress.com/2019/01/conditions-cover-3.png',
+        tags: ['status', 'condtion']
     }
 ];
 

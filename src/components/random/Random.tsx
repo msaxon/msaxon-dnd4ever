@@ -26,6 +26,18 @@ const panels: kvp[] = [
     {
         key: 'desert',
         value: 'Desert Encounter'
+    },
+    {
+        key: 'curse',
+        value: 'Curse'
+    },
+    {
+        key: 'drink',
+        value: 'Drink'
+    },
+    {
+        key: 'wildMagic',
+        value: 'Wild Magic Effect'
     }
 ];
 
@@ -42,10 +54,21 @@ export const Random: React.FC<{}> = () => {
                 return <RandomList list={R.getBook()} />;
             case 'desert':
                 return <RandomList list={R.getDesertEncounter()} />;
+            case 'drink':
+                return <RandomList list={R.getDrink()} />;
+            case 'curse':
+                return <RandomList list={R.getCurse()} />;
+            case 'wildMagic':
+                return <RandomList list={R.getWildMagic()} />;
             default:
                 return <p>Click a button to generate something random.</p>;
         }
     };
+    panels.sort((a, b) => {
+        if (a > b) return -1;
+        else if (a < b) return 1;
+        else return 0;
+    });
 
     return (
         <Grid container>

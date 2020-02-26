@@ -1,7 +1,7 @@
 import sys
 
 filename = sys.argv[1]
-file = open(filename)
+file = open(filename, encoding="utf-8")
 
 newfile = open(filename + ".fm", "w")
 

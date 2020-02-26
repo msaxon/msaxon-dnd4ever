@@ -5,6 +5,10 @@ import * as Desc from '../data/NPCAppearence';
 import * as Weather from '../data/Weather';
 import * as Book from '../data/Books';
 import * as DesertEncounter from '../data/Desert';
+import { knowledge } from '../data/Knowledge';
+import { curses } from '../data/Curses';
+import { drinks } from '../data/Drinks';
+import { wildMagic } from '../data/WildMagic';
 
 export const randomItemFromCollection = (collection: string[]): string => {
     return collection[Math.floor(Math.random() * collection.length)];
@@ -79,7 +83,8 @@ export const getNpcDescription = (): string[] => {
         'Prejudice: ' + randomItemFromCollection(Desc.prejudice),
         'Flaw: ' + randomItemFromCollection(Desc.flaws),
         'Fear: ' + randomItemFromCollection(fears),
-        'Desire: ' + randomItemFromCollection(desires)
+        'Desire: ' + randomItemFromCollection(desires),
+        'Information: ' + randomItemFromCollection(knowledge)
     ];
 
     const trueOrFalseArr = [
@@ -121,4 +126,16 @@ export const getBook = (): string[] => {
 
 export const getDesertEncounter = (): string[] => {
     return [randomItemFromCollection(DesertEncounter.desertRandom)];
+};
+
+export const getCurse = (): string[] => {
+    return [randomItemFromCollection(curses)];
+};
+
+export const getDrink = (): string[] => {
+    return [randomItemFromCollection(drinks)];
+};
+
+export const getWildMagic = (): string[] => {
+    return [randomItemFromCollection(wildMagic)];
 };
