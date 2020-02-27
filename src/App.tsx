@@ -6,7 +6,7 @@ import { Home } from './components/home/Home';
 import { Random } from './components/random/Random';
 import { Rules } from './components/rules/Rules';
 import { About } from './components/about/About';
-import { Monsters } from './components/monsters/monsters';
+import { Monsters } from './components/monsters/Monsters';
 
 import './App.css';
 
