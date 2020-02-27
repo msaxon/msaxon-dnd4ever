@@ -89,7 +89,25 @@ export const RulesTwo = [
         title: 'Conditions',
         desc: 'List of all statuses and conditions',
         img: 'https://thinkdm.files.wordpress.com/2019/01/conditions-cover-3.png',
-        tags: ['status', 'condtion']
+        tags: ['status', 'condition', 'conditions']
+    },
+    {
+        title: 'Exhaustion',
+        desc: 'List of all levels of exhaustion.',
+        img: 'https://i.pinimg.com/originals/5b/7c/26/5b7c2650be45840483658b4a0f5a10ab.png',
+        tags: ['exhaustion', 'condition', 'conditions']
+    },
+    {
+        title: 'Cover',
+        desc: 'Rules for cover.',
+        img: 'https://i.pinimg.com/originals/c8/a9/2c/c8a92c968349b522049ef535035d7606.png',
+        tags: ['cover', 'combat']
+    },
+    {
+        title: 'Vision and Light',
+        desc: 'Types of lighting and how you see in them',
+        img: 'https://i.pinimg.com/originals/42/60/e7/4260e784f2586db2f7d0988cb56f263f.png',
+        tags: ['light', 'vision', 'darkvision']
     }
 ];
 

@@ -58,6 +58,23 @@ export const Home: FunctionComponent<{}> = () => {
                         </Card>
                     </Link>
                 </div>
+                <div className="ruleCard-home">
+                    <Link to="/monsters" className="anchor-card">
+                        <Card className={classes.card}>
+                            <CardHeader title="Monsters" subheader="All the monsters" />
+                            <CardContent>
+                                <Typography variant="body2" component="p">
+                                    All the monsters and all their stats with initiative tracker (soon).
+                                </Typography>
+                            </CardContent>
+                            <CardMedia
+                                title="Monsters"
+                                className={classes.media}
+                                image="https://brandewinder.com//assets/2018-07-23-goblin.png"
+                            />
+                        </Card>
+                    </Link>
+                </div>
             </div>
         </div>
     );
