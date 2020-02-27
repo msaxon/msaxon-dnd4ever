@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Card, CardHeader, CardMedia, CardContent, Typography, makeStyles } from '@material-ui/core';
+import { Card, CardHeader, CardMedia, CardContent, Typography, makeStyles } from '@material-ui/core';
 import '../home/Home.css';
 
 const useStyles = makeStyles({
