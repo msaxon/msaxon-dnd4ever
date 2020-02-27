@@ -19,10 +19,7 @@ export const Monsters: FunctionComponent<{}> = () => {
                         <div className="ruleCard">
                             <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
                                 <Card className={classes.card}>
-                                    <CardHeader
-                                        title={monster.name}
-                                        subheader={monster.alignment + ' ' + monster.size}
-                                    />
+                                    <CardHeader title={monster.name} subheader={monster.size + ' ' + monster.type} />
                                     <CardContent>
                                         <p>{monster.alignment}</p>
                                     </CardContent>
