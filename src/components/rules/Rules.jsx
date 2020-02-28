@@ -40,9 +40,6 @@ export const Rules = () => {
 
     let ruleData = RuleObj.RulesTwo;
 
-    console.log('ruleObj', RuleObj.Rules);
-    console.log('ruleData', ruleData);
-
     ruleData = ruleData.filter(rule => {
         let matches = false;
         rule.tags.forEach(tag => {
