@@ -15,3 +15,15 @@
 .monster-statblock div p:nth-child(2) {
     margin-bottom: 8px;
 }
+
+.init-tracker-item {
+    min-width: 310px;
+}
+
+.init-field {
+    max-width: 50px;
+}
+
+.add-npc-form {
+    margin: 30px;
+}
