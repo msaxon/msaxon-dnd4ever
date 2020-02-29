@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-
 import { Header } from './components/shared/Header';
 import { Home } from './components/home/Home';
 import { Random } from './components/random/Random';
@@ -17,6 +16,7 @@ const App: React.FC = () => {
                 <Header />
             </div>
             <Route path="/" exact component={Home} />
+            <Route path="msaxon-dnd4ever/" component={Home} />
             <Route path="/random" component={Random} />
             <Route path="/rules" component={Rules} />
             <Route path="/monsters" component={Monsters} />
