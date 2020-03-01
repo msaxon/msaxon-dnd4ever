@@ -74,7 +74,8 @@ export const Monsters: FunctionComponent<{}> = () => {
     }
 
     //only show some of them
-    monsterData = monsterData.slice(0, monsterCount);
+    const slicedMonsterData = monsterData.slice(0, monsterCount);
+    console.log('nums', monsterData.length, monsterCount);
 
     return (
         <div className="center-parent flex-column">
@@ -91,7 +92,7 @@ export const Monsters: FunctionComponent<{}> = () => {
                 loader={<p>Loading...</p>}
             >
                 <Grid container alignItems="center" justify="center">
-                    {monsterData.map(monster => {
+                    {slicedMonsterData.map(monster => {
                         return (
                             <div className="ruleCard" key={monster.name + monster.size}>
                                 <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
