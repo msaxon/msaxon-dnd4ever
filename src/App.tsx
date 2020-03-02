@@ -6,7 +6,7 @@ import { Random } from './components/random/Random';
 import { Rules } from './components/rules/Rules';
 import { About } from './components/about/About';
 import { Monsters } from './components/monsters/Monsters';
-
+import { Spells } from './components/spells/Spells';
 import './App.css';
 
 const App: React.FC = () => {
@@ -20,6 +20,7 @@ const App: React.FC = () => {
             <Route path="/random" component={Random} />
             <Route path="/rules" component={Rules} />
             <Route path="/monsters" component={Monsters} />
+            <Route path="/spells" component={Spells} />
             <Route path="/about" component={About} />
         </BrowserRouter>
     );

@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, makeStyles } from '@material-ui/core';
-import { Gavel, HomeRounded, MenuSharp, Help, Info, EmojiNature } from '@material-ui/icons';
+import { Gavel, HomeRounded, MenuSharp, Help, Info, EmojiNature, Fireplace } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
@@ -52,6 +52,14 @@ export const Menu: FunctionComponent<{}> = () => {
                             </ListItemIcon>
                             <ListItemText>
                                 <Link to="/monsters">Monsters</Link>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemIcon>
+                                <Fireplace />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <Link to="/spells">Spells</Link>
                             </ListItemText>
                         </ListItem>
                         <ListItem button>
