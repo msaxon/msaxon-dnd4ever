@@ -16,7 +16,7 @@ const App: React.FC = () => {
                 <Header />
             </div>
             <Route path="/" exact component={Home} />
-            <Route path="msaxon-dnd4ever/" component={Home} />
+            <Route path="/msaxon-dnd4ever/" component={Home} />
             <Route path="/random" component={Random} />
             <Route path="/rules" component={Rules} />
             <Route path="/monsters" component={Monsters} />
