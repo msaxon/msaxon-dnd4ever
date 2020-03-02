@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/msaxon-dnd4ever/precache-manifest.6ab1e7208a436622aec19b587eaed582.js"
+  "/msaxon-dnd4ever/precache-manifest.53126aab3af7e60a4b60398993bebc66.js"
 );
 
 self.addEventListener('message', (event) => {
