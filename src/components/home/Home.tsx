@@ -19,7 +19,7 @@ export const Home: FunctionComponent<{}> = () => {
     return (
         <div className="center-parent flex-column">
             <h2>Home</h2>
-            <p>
+            <p className="main-text">
                 Welcome to D&D 4Ever, a dungeon master's tool for quickly finding rules and generating random content.
                 Take a look at some of these features offered below.
             </p>
@@ -71,6 +71,23 @@ export const Home: FunctionComponent<{}> = () => {
                                 title="Monsters"
                                 className={classes.media}
                                 image="https://brandewinder.com//assets/2018-07-23-goblin.png"
+                            />
+                        </Card>
+                    </Link>
+                </div>
+                <div className="ruleCard-home">
+                    <Link to="/spells" className="anchor-card">
+                        <Card className={classes.card}>
+                            <CardHeader title="Spells" subheader="All of the spells" />
+                            <CardContent>
+                                <Typography variant="body2" component="p">
+                                    All the spells sortable by level, school, and cast time.
+                                </Typography>
+                            </CardContent>
+                            <CardMedia
+                                title="Monsters"
+                                className={classes.media}
+                                image="https://mymswell.files.wordpress.com/2019/08/minor-illusion.png"
                             />
                         </Card>
                     </Link>
