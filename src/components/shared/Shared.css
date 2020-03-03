@@ -65,3 +65,7 @@ nav + div {
     align-items: center;
     flex-wrap: wrap;
 }
+
+.flex-row {
+    flex-direction: row;
+}

@@ -16,12 +16,14 @@ import { spells } from '../../data/Spells';
 import '../spells/Spells.css';
 import { SpellType } from '../../types/SpellType';
 import { SpellCard } from './SpellCard';
+import { AddCircleOutline, RemoveCircleOutline } from '@material-ui/icons';
 
 export const Spells: FunctionComponent<{}> = () => {
     const [search, setSearch] = useState('');
     const [sortId, setSortId] = useState('name');
     const [sortDirAsc, setSortDirAsc] = useState(true);
     const [isOpen, setIsOpen] = useState<SpellType | undefined>(undefined);
+    const [pinnedSpells, setPinnedSpell] = useState<SpellType[]>([]);
 
     const updateSort = id => {
         console.log('updating', id);
@@ -37,7 +39,7 @@ export const Spells: FunctionComponent<{}> = () => {
         return str.toUpperCase().includes(search.toUpperCase());
     };
 
-    const filteredSpells = spells.filter(spell => includesSearch(spell.name));
+    const filteredSpells: SpellType[] = spells.filter(spell => includesSearch(spell.name));
     filteredSpells.sort((a, b) => {
         if (a[sortId] > b[sortId]) {
             return sortDirAsc ? 1 : -1;
@@ -45,6 +47,7 @@ export const Spells: FunctionComponent<{}> = () => {
             return sortDirAsc ? -1 : 1;
         } else return 0;
     });
+    console.log('pinnedSpells', pinnedSpells);
 
     return (
         <div className="center-parent flex-column">
@@ -58,10 +61,20 @@ export const Spells: FunctionComponent<{}> = () => {
                     />
                 </Grid>
             </Grid>
+            <div className="center-parent flex-row pinned-spell-container">
+                {pinnedSpells.map(spell => {
+                    return (
+                        <div className="pinned-spell">
+                            <SpellCard spell={spell} />
+                        </div>
+                    );
+                })}
+            </div>
             <TableContainer component={Paper}>
                 <Table size="small">
                     <TableHead>
                         <TableRow>
+                            <TableCell>Pinned</TableCell>
                             <TableCell onClick={() => updateSort('name')}>
                                 <strong>Name</strong>
                             </TableCell>
@@ -77,18 +90,31 @@ export const Spells: FunctionComponent<{}> = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {filteredSpells.map(spell => (
-                            <TableRow key={spell.name}>
-                                <TableCell component="th" scope="row">
-                                    <Button size="small" color="primary" onClick={() => setIsOpen(spell)}>
-                                        {spell.name}
-                                    </Button>
-                                </TableCell>
-                                <TableCell align="right">{spell.level}</TableCell>
-                                <TableCell align="right">{spell.school}</TableCell>
-                                <TableCell align="right">{spell.castingTime}</TableCell>
-                            </TableRow>
-                        ))}
+                        {filteredSpells.map(spell => {
+                            let button = (
+                                <AddCircleOutline onClick={() => setPinnedSpell(pinnedSpells.concat([spell]))} />
+                            );
+                            if (pinnedSpells.includes(spell)) {
+                                button = (
+                                    <RemoveCircleOutline
+                                        onClick={() => setPinnedSpell(pinnedSpells.filter(s => s.name !== spell.name))}
+                                    />
+                                );
+                            }
+                            return (
+                                <TableRow key={spell.name}>
+                                    <TableCell>{button}</TableCell>
+                                    <TableCell component="th" scope="row">
+                                        <Button size="small" color="primary" onClick={() => setIsOpen(spell)}>
+                                            {spell.name}
+                                        </Button>
+                                    </TableCell>
+                                    <TableCell align="right">{spell.level}</TableCell>
+                                    <TableCell align="right">{spell.school}</TableCell>
+                                    <TableCell align="right">{spell.castingTime}</TableCell>
+                                </TableRow>
+                            );
+                        })}
                     </TableBody>
                 </Table>
             </TableContainer>
