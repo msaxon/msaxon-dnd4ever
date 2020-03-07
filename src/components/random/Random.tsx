@@ -38,6 +38,18 @@ const panels: kvp[] = [
     {
         key: 'wildMagic',
         value: 'Wild Magic Effect'
+    },
+    {
+        key: 'streetEncounters',
+        value: 'Street Encounter'
+    },
+    {
+        key: 'magicalServices',
+        value: 'Magical Services'
+    },
+    {
+        key: 'food',
+        value: 'Food'
     }
 ];
 
@@ -60,6 +72,12 @@ export const Random: React.FC<{}> = () => {
                 return <RandomList list={R.getCurse()} />;
             case 'wildMagic':
                 return <RandomList list={R.getWildMagic()} />;
+            case 'streetEncounters':
+                return <RandomList list={R.getStreetEncounter()} />;
+            case 'magicalServices':
+                return <RandomList list={R.getMagicalService()} />;
+            case 'food':
+                return <RandomList list={R.getFood()} />;
             default:
                 return <p>Click a button to generate something random.</p>;
         }

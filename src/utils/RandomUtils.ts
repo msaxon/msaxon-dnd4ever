@@ -9,6 +9,9 @@ import { knowledge } from '../data/Knowledge';
 import { curses } from '../data/Curses';
 import { drinks } from '../data/Drinks';
 import { wildMagic } from '../data/WildMagic';
+import { StreetEncounters } from '../data/StreetEncounters';
+import { MagicalServices } from '../data/MagicalServices';
+import { Food } from '../data/Food';
 
 export const randomItemFromCollection = (collection: string[]): string => {
     return collection[Math.floor(Math.random() * collection.length)];
@@ -138,4 +141,16 @@ export const getDrink = (): string[] => {
 
 export const getWildMagic = (): string[] => {
     return [randomItemFromCollection(wildMagic)];
+};
+
+export const getStreetEncounter = (): string[] => {
+    return [randomItemFromCollection(StreetEncounters)];
+};
+
+export const getMagicalService = (): string[] => {
+    return [randomItemFromCollection(MagicalServices)];
+};
+
+export const getFood = (): string[] => {
+    return [randomItemFromCollection(Food)];
 };
