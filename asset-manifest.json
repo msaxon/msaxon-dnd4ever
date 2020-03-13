@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/msaxon-dnd4ever/static/css/main.323ff8c7.chunk.css",
-    "main.js": "/msaxon-dnd4ever/static/js/main.0917894f.chunk.js",
-    "main.js.map": "/msaxon-dnd4ever/static/js/main.0917894f.chunk.js.map",
+    "main.js": "/msaxon-dnd4ever/static/js/main.ac47a562.chunk.js",
+    "main.js.map": "/msaxon-dnd4ever/static/js/main.ac47a562.chunk.js.map",
     "runtime-main.js": "/msaxon-dnd4ever/static/js/runtime-main.1d2196fb.js",
     "runtime-main.js.map": "/msaxon-dnd4ever/static/js/runtime-main.1d2196fb.js.map",
     "static/js/2.895d039e.chunk.js": "/msaxon-dnd4ever/static/js/2.895d039e.chunk.js",
     "static/js/2.895d039e.chunk.js.map": "/msaxon-dnd4ever/static/js/2.895d039e.chunk.js.map",
     "index.html": "/msaxon-dnd4ever/index.html",
-    "precache-manifest.23906d92df4aa287d4f8a7bd4d48aa14.js": "/msaxon-dnd4ever/precache-manifest.23906d92df4aa287d4f8a7bd4d48aa14.js",
+    "precache-manifest.8375a456dcce3bf77033c1eb886a95d2.js": "/msaxon-dnd4ever/precache-manifest.8375a456dcce3bf77033c1eb886a95d2.js",
     "service-worker.js": "/msaxon-dnd4ever/service-worker.js",
     "static/css/main.323ff8c7.chunk.css.map": "/msaxon-dnd4ever/static/css/main.323ff8c7.chunk.css.map",
     "static/js/2.895d039e.chunk.js.LICENSE": "/msaxon-dnd4ever/static/js/2.895d039e.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1d2196fb.js",
     "static/js/2.895d039e.chunk.js",
     "static/css/main.323ff8c7.chunk.css",
-    "static/js/main.0917894f.chunk.js"
+    "static/js/main.ac47a562.chunk.js"
   ]
 }
