@@ -47,7 +47,6 @@ export const Spells: FunctionComponent<{}> = () => {
             return sortDirAsc ? -1 : 1;
         } else return 0;
     });
-    console.log('pinnedSpells', pinnedSpells);
 
     return (
         <div className="center-parent flex-column">
