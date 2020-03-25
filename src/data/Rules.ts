@@ -114,6 +114,12 @@ export const RulesTwo = [
         desc: 'All of the potions you could ever want.',
         img: 'https://i.imgur.com/WhhegbS.png',
         tags: ['cost', 'prices', 'shop']
+    },
+    {
+        title: 'Spellcasting Services',
+        desc: 'How much specific spells cost to get done.',
+        img: 'https://2.bp.blogspot.com/-HlGRTbeOX7s/VcLbzdFnYlI/AAAAAAAAE88/-pj8pVw5J2E/s1600/257spellcosts.jpg',
+        tags: ['cost', 'services', 'spells']
     }
 ];
 
