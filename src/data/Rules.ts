@@ -108,6 +108,12 @@ export const RulesTwo = [
         desc: 'Types of lighting and how you see in them',
         img: 'https://i.pinimg.com/originals/42/60/e7/4260e784f2586db2f7d0988cb56f263f.png',
         tags: ['light', 'vision', 'darkvision']
+    },
+    {
+        title: 'Apothecary',
+        desc: 'All of the potions you could ever want.',
+        img: 'https://i.imgur.com/WhhegbS.png',
+        tags: ['cost', 'prices', 'shop']
     }
 ];
 
