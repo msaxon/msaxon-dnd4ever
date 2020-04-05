@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/msaxon-dnd4ever/static/css/main.323ff8c7.chunk.css",
-    "main.js": "/msaxon-dnd4ever/static/js/main.8e2047bb.chunk.js",
-    "main.js.map": "/msaxon-dnd4ever/static/js/main.8e2047bb.chunk.js.map",
+    "main.css": "/msaxon-dnd4ever/static/css/main.24b5a985.chunk.css",
+    "main.js": "/msaxon-dnd4ever/static/js/main.8413d553.chunk.js",
+    "main.js.map": "/msaxon-dnd4ever/static/js/main.8413d553.chunk.js.map",
     "runtime-main.js": "/msaxon-dnd4ever/static/js/runtime-main.1d2196fb.js",
     "runtime-main.js.map": "/msaxon-dnd4ever/static/js/runtime-main.1d2196fb.js.map",
-    "static/js/2.895d039e.chunk.js": "/msaxon-dnd4ever/static/js/2.895d039e.chunk.js",
-    "static/js/2.895d039e.chunk.js.map": "/msaxon-dnd4ever/static/js/2.895d039e.chunk.js.map",
+    "static/js/2.1751e635.chunk.js": "/msaxon-dnd4ever/static/js/2.1751e635.chunk.js",
+    "static/js/2.1751e635.chunk.js.map": "/msaxon-dnd4ever/static/js/2.1751e635.chunk.js.map",
     "index.html": "/msaxon-dnd4ever/index.html",
-    "precache-manifest.b58aa1c2ad2eb874b9ee8cd13a48a66e.js": "/msaxon-dnd4ever/precache-manifest.b58aa1c2ad2eb874b9ee8cd13a48a66e.js",
+    "precache-manifest.6dff8cbd5942304bb66b516c0c132821.js": "/msaxon-dnd4ever/precache-manifest.6dff8cbd5942304bb66b516c0c132821.js",
     "service-worker.js": "/msaxon-dnd4ever/service-worker.js",
-    "static/css/main.323ff8c7.chunk.css.map": "/msaxon-dnd4ever/static/css/main.323ff8c7.chunk.css.map",
-    "static/js/2.895d039e.chunk.js.LICENSE": "/msaxon-dnd4ever/static/js/2.895d039e.chunk.js.LICENSE"
+    "static/css/main.24b5a985.chunk.css.map": "/msaxon-dnd4ever/static/css/main.24b5a985.chunk.css.map",
+    "static/js/2.1751e635.chunk.js.LICENSE": "/msaxon-dnd4ever/static/js/2.1751e635.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.1d2196fb.js",
-    "static/js/2.895d039e.chunk.js",
-    "static/css/main.323ff8c7.chunk.css",
-    "static/js/main.8e2047bb.chunk.js"
+    "static/js/2.1751e635.chunk.js",
+    "static/css/main.24b5a985.chunk.css",
+    "static/js/main.8413d553.chunk.js"
   ]
 }
