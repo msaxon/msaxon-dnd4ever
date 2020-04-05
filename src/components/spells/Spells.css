@@ -17,5 +17,5 @@
 }
 
 .MuiDivider-root {
-    min-height: 5px;
+    min-height: 5px !important;
 }
