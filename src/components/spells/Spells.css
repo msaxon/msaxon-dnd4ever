@@ -11,3 +11,11 @@
     margin: 10px;
     max-width: 310px;
 }
+
+.divider {
+    min-height: 20px;
+}
+
+.MuiDivider-root {
+    height: 5px;
+}

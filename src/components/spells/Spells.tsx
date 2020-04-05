@@ -10,7 +10,8 @@ import {
     TableCell,
     TableBody,
     Button,
-    Dialog
+    Dialog,
+    Divider
 } from '@material-ui/core';
 import { spells } from '../../data/Spells';
 import '../spells/Spells.css';
@@ -48,6 +49,14 @@ export const Spells: FunctionComponent<{}> = () => {
         } else return 0;
     });
 
+    pinnedSpells.sort((a, b) => {
+        if (a[sortId] > b[sortId]) {
+            return sortDirAsc ? 1 : -1;
+        } else if (a[sortId] < b[sortId]) {
+            return sortDirAsc ? -1 : 1;
+        } else return 0;
+    });
+
     return (
         <div className="center-parent flex-column">
             <Grid container alignItems="center" justify="center">
@@ -60,15 +69,7 @@ export const Spells: FunctionComponent<{}> = () => {
                     />
                 </Grid>
             </Grid>
-            <div className="center-parent flex-row pinned-spell-container">
-                {pinnedSpells.map(spell => {
-                    return (
-                        <div className="pinned-spell">
-                            <SpellCard spell={spell} />
-                        </div>
-                    );
-                })}
-            </div>
+
             <TableContainer component={Paper}>
                 <Table size="small">
                     <TableHead>
@@ -89,17 +90,50 @@ export const Spells: FunctionComponent<{}> = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
+                        {pinnedSpells.map(spell => {
+                            const button = (
+                                <RemoveCircleOutline
+                                    onClick={() => setPinnedSpell(pinnedSpells.filter(s => s.name !== spell.name))}
+                                />
+                            );
+                            return (
+                                <TableRow key={spell.name}>
+                                    <TableCell>{button}</TableCell>
+                                    <TableCell component="th" scope="row">
+                                        <Button size="small" color="primary" onClick={() => setIsOpen(spell)}>
+                                            {spell.name}
+                                        </Button>
+                                    </TableCell>
+                                    <TableCell align="right">{spell.level}</TableCell>
+                                    <TableCell align="right">{spell.school}</TableCell>
+                                    <TableCell align="right">{spell.castingTime}</TableCell>
+                                </TableRow>
+                            );
+                        })}
+                        <TableRow key="divider">
+                            <TableCell>
+                                <Divider />
+                            </TableCell>
+                            <TableCell>
+                                <Divider />
+                            </TableCell>
+                            <TableCell>
+                                <Divider />
+                            </TableCell>
+                            <TableCell>
+                                <Divider />
+                            </TableCell>
+                            <TableCell>
+                                <Divider />
+                            </TableCell>
+                        </TableRow>
                         {filteredSpells.map(spell => {
-                            let button = (
+                            if (pinnedSpells.includes(spell)) {
+                                return <></>;
+                            }
+                            const button = (
                                 <AddCircleOutline onClick={() => setPinnedSpell(pinnedSpells.concat([spell]))} />
                             );
-                            if (pinnedSpells.includes(spell)) {
-                                button = (
-                                    <RemoveCircleOutline
-                                        onClick={() => setPinnedSpell(pinnedSpells.filter(s => s.name !== spell.name))}
-                                    />
-                                );
-                            }
                             return (
                                 <TableRow key={spell.name}>
                                     <TableCell>{button}</TableCell>
