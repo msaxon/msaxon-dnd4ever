@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { useState } from 'react';
 import {
     Grid,
     TextField,
@@ -11,23 +11,22 @@ import {
     TableBody,
     Button,
     Dialog,
-    Divider
+    Divider,
 } from '@material-ui/core';
+import { useStateWithLocalStorageArray } from '../../hooks/useStateWithLocalStorage';
 import { spells } from '../../data/Spells';
-import '../spells/Spells.css';
-import { SpellType } from '../../types/SpellType';
 import { SpellCard } from './SpellCard';
 import { AddCircleOutline, RemoveCircleOutline } from '@material-ui/icons';
+import '../spells/Spells.css';
 
-export const Spells: FunctionComponent<{}> = () => {
+export const Spells = () => {
     const [search, setSearch] = useState('');
     const [sortId, setSortId] = useState('name');
     const [sortDirAsc, setSortDirAsc] = useState(true);
-    const [isOpen, setIsOpen] = useState<SpellType | undefined>(undefined);
-    const [pinnedSpells, setPinnedSpell] = useState<SpellType[]>([]);
+    const [isOpen, setIsOpen] = useState(undefined);
+    const [pinnedSpells, setPinnedSpell] = useStateWithLocalStorageArray('pinnedSpells');
 
-    const updateSort = id => {
-        console.log('updating', id);
+    const updateSort = (id) => {
         if (id === sortId) {
             setSortDirAsc(!sortDirAsc);
         } else {
@@ -36,11 +35,11 @@ export const Spells: FunctionComponent<{}> = () => {
         }
     };
 
-    const includesSearch = str => {
+    const includesSearch = (str) => {
         return str.toUpperCase().includes(search.toUpperCase());
     };
 
-    const filteredSpells: SpellType[] = spells.filter(spell => includesSearch(spell.name));
+    const filteredSpells = spells.filter((spell) => includesSearch(spell.name));
     filteredSpells.sort((a, b) => {
         if (a[sortId] > b[sortId]) {
             return sortDirAsc ? 1 : -1;
@@ -65,7 +64,7 @@ export const Spells: FunctionComponent<{}> = () => {
                         label="filter"
                         autoComplete="off"
                         fullWidth={true}
-                        onChange={e => setSearch(e.target.value)}
+                        onChange={(e) => setSearch(e.target.value)}
                     />
                 </Grid>
             </Grid>
@@ -90,10 +89,10 @@ export const Spells: FunctionComponent<{}> = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {pinnedSpells.map(spell => {
+                        {pinnedSpells.map((spell) => {
                             const button = (
                                 <RemoveCircleOutline
-                                    onClick={() => setPinnedSpell(pinnedSpells.filter(s => s.name !== spell.name))}
+                                    onClick={() => setPinnedSpell(pinnedSpells.filter((s) => s.name !== spell.name))}
                                 />
                             );
                             return (
@@ -127,7 +126,7 @@ export const Spells: FunctionComponent<{}> = () => {
                                 <Divider />
                             </TableCell>
                         </TableRow>
-                        {filteredSpells.map(spell => {
+                        {filteredSpells.map((spell) => {
                             if (pinnedSpells.includes(spell)) {
                                 return <></>;
                             }
